@@ -1,0 +1,18 @@
+@mixin copy {
+    h3 {
+        color: #000;
+        font: 500 26px 'Montserrat', sans-serif;
+        margin: 0 0 20px 0;
+    }
+    p {
+        color: #666;
+        font: 16px/1.6 'Source Sans Pro', sans-serif;
+        margin: 1rem 0 0 0;
+    }
+    ul {
+        li {
+            color: #666;
+            font: 16px/1.6 'Source Sans Pro', sans-serif;
+        }
+    }
+}

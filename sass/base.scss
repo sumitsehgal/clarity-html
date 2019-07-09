@@ -1,0 +1,16 @@
+@import 'variable.scss';
+@import 'header.scss';
+@import 'navigation.scss';
+@import 'slider.scss';
+@import 'page.scss';
+@import 'footer.scss';
+* {
+    outline: 0 none;
+}
+
+.container {
+    @media (max-width: 1200px) {
+        max-width: 1200px;
+        width: 100%;
+    }
+}
