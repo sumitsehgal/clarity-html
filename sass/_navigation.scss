@@ -1,12 +1,9 @@
 .mynav {
     background: #F2F2F2;
-    min-height: 90px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    // position: fixed;
-    // top: 45px;
-    // left: 0;
-    // width: 100%;
-    // z-index: 10000;
+    min-height: 90px;
+    padding-bottom: 0;
+    padding-top: 0;
     .navbar-brand {
         display: flex;
         align-items: center;
@@ -22,28 +19,61 @@
     }
     .navbar-nav {
         li {
-            margin: 0 12px;
+            align-items: center;
+            display: flex;
+            padding: 0 15px;
+            min-height: 90px;
+            position: relative;
             a {
                 color: #707070;
                 font: 700 14px/1 'Montserrat', sans-serif;
                 text-decoration: none;
-                &:hover {
-                    color: #00458E;
-                }
             }
+            &:hover,
             &.active {
-                color: #00458E;
+                background-color: #7785BA;
+                a {
+                    color: #fff;
+                }
             }
             &:first-child {
                 margin-left: 0;
             }
-            &:last-child {
+            &.cta {
                 border-left: 1px solid #01448d;
-                padding-left: 12px;
+                padding-left: 15px;
                 margin: 0;
                 a {
                     color: #F54785;
                     text-transform: uppercase;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            .sub-nav {
+                background-color: #7785BA;
+                display: none;
+                list-style: none;
+                left: 0;
+                margin: 0;
+                padding: 5px 25px;
+                position: absolute;
+                top: 100%;
+                // width: 220px;
+                li {
+                    min-height: initial;
+                    margin: 15px 0;
+                    padding: 0;
+                    a {
+                        font-weight: 500;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            &:hover {
+                .sub-nav {
+                    display: block;
                 }
             }
         }

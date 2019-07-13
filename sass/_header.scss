@@ -1,3 +1,19 @@
+header {
+    position: relative;
+    transition: top 0.3s;
+    z-index: 100;
+    &.fix {
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+        .top {
+            display: none;
+        }
+    }
+}
+
 .top {
     background: #01448d;
     padding: 10px 0;
