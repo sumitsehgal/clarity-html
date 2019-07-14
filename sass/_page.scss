@@ -15,6 +15,7 @@
 }
 
 .breadcrumbs {
+    background-color: #cfd3d5;
     padding: 20px 10px;
     .bread {
         ul {
@@ -430,5 +431,24 @@
                 }
             }
         }
+    }
+}
+
+.discover {
+    .discover-img {
+        padding: 25px 0;
+        @media (min-width: 768px) {
+            padding: 50px 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .copy {
+        padding: 25px 10px;
+        @media (min-width: 992px) {
+            padding: 50px 0;
+        }
+        @include copy;
     }
 }
