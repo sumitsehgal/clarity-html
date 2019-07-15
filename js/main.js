@@ -3,6 +3,7 @@ var prevScrollpos = $(window).scrollTop();
 $(function() {
     navScroll();
     scrollId();
+    supportAcc();
     $(".owl-carousel").owlCarousel({
         items: 4,
         dots: false,
@@ -27,8 +28,8 @@ function scrollId() {
 function navScroll() {
     var currentScrollPos = $(window).scrollTop(),
         eleHead = $('#navbar');
-    console.log('pagePosition previous - ' + prevScrollpos);
-    console.log('pagePosition now - ' + currentScrollPos);
+    // console.log('pagePosition previous - ' + prevScrollpos);
+    // console.log('pagePosition now - ' + currentScrollPos);
     if (currentScrollPos > eleHead.height()) {
         eleHead.find('.top').hide();
         eleHead.addClass('fix');
@@ -43,5 +44,13 @@ function navScroll() {
         eleHead.find('.top').removeAttr('style');
         eleHead.removeClass('fix');
         $('body').removeAttr('style');
+    }
+}
+
+function supportAcc() {
+    if ($('.steps').length > 0) {
+        $('.ques h3').click(function() {
+            $(this).parents('.box').toggleClass('show').find('.ans').slideToggle();
+        })
     }
 }
