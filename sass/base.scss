@@ -8,6 +8,10 @@
     outline: 0 none;
 }
 
+body {
+    padding-top: 135px;
+}
+
 .container {
     @media (max-width: 1200px) {
         max-width: 1200px;

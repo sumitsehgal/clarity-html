@@ -30,14 +30,19 @@ function navScroll() {
         eleHead = $('#navbar');
     // console.log('pagePosition previous - ' + prevScrollpos);
     // console.log('pagePosition now - ' + currentScrollPos);
+    // console.log('header hight ' + eleHead.height());
     if (currentScrollPos > eleHead.height()) {
+        // $('body').css('padding-top', eleHead.height());
         eleHead.find('.top').hide();
         eleHead.addClass('fix');
-        $('body').css('padding-top', eleHead.height());
         if (eleHead.hasClass('fix') && prevScrollpos > currentScrollPos) {
             eleHead.css('top', '0');
+            eleHead.addClass('trans');
         } else {
             eleHead.css('top', '-90px');
+            setTimeout(function() {
+                eleHead.removeClass('trans');
+            }, 300);
         }
         prevScrollpos = currentScrollPos;
     } else {
