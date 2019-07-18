@@ -4,6 +4,7 @@ $(function() {
     navScroll();
     scrollId();
     supportAcc();
+    productImgHgt();
     $(".owl-carousel").owlCarousel({
         items: 4,
         dots: false,
@@ -12,6 +13,10 @@ $(function() {
         navText: ["<img class='prev' src='images/blue-arrow.png'>", "<img class='next' src='images/blue-arrow.png'>"]
     });
 });
+
+$(window).resize(function() {
+    productImgHgt();
+})
 
 $(window).scroll(function() {
     navScroll();
@@ -58,4 +63,9 @@ function supportAcc() {
             $(this).parents('.box').toggleClass('show').find('.ans').slideToggle();
         })
     }
+}
+
+function productImgHgt() {
+    if ($('.products').length > 0)
+        $('.products .product-box .img').css('height', $('.products .product-box').width());
 }

@@ -553,6 +553,45 @@
     }
 }
 
+.products {
+    padding: 30px 10px;
+    @media (min-width: 1600px) {
+        padding: 40px 0;
+    }
+    .product-box {
+        margin: 0 0 30px 0;
+        border: 1px solid #29A8D2;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        .img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        h3 {
+            color: #01448d;
+            font: 600 20px 'Montserrat', sans-serif;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        &:hover {
+            border-color: #F54785;
+            h3 {
+                color: #F54785;
+            }
+        }
+    }
+}
+
 .contact-block {
     padding: 50px 0 80px;
     h4 {
