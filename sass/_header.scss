@@ -20,9 +20,13 @@ header {
 }
 
 .top {
-    background: #01448d;
-    padding: 10px 0;
-    min-height: 45px;
+    display: none;
+    @media (min-width: 768px) {
+        background: #01448d;
+        display: block;
+        min-height: 45px;
+        padding: 10px 0;
+    }
     ul {
         display: flex;
         margin: 0;
